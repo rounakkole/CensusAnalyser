@@ -4,7 +4,7 @@ using CensusAnalyser;
 
 namespace CensusAnalyserTest
 {
-    public class Tests
+    public class ISCdataTest
     {
         public ISCdataLoad ISCdataObj;
 
@@ -22,7 +22,7 @@ namespace CensusAnalyserTest
         }
 
         [Test]
-        public void GivenStateCensusDataRightFilePath_InLoadCensusData_ReturnNumberOfRecords()
+        public void GivenRightPath_LoadCSV_ReturnPass()
         {
             int Records = 29;
             string Expected = "test pass";
@@ -31,7 +31,7 @@ namespace CensusAnalyserTest
         }
 
         [Test]
-        public void GivenStateCensusDataWrongFilePath_InLoadCensusData_ThrowCustomException()
+        public void GivenWrongPath_ReturnCustomException()
         {
             int Records = 29;
             string Expected = "wrong file path";
@@ -40,7 +40,7 @@ namespace CensusAnalyserTest
         }
 
         [Test]
-        public void GivenStateCensusDataRightFilePath_ButWrongExtension_InLoadCensusData_ThrowCustomException()
+        public void GivenWrongExtension_ReturnCustomException()
         {
             int Records = 29;
             string Expected = "wrong file extension";
@@ -49,7 +49,7 @@ namespace CensusAnalyserTest
         }
 
         [Test]
-        public void GivenStateCensusDataRightFilePath_ButWrongDelimiter_InLoadCensusData_ThrowCustomException()
+        public void GivenWrongDelimiter_ReturnCustomException()
         {
             int Records = 29;
             string Expected = "wrong csv delimiter";
@@ -58,7 +58,7 @@ namespace CensusAnalyserTest
         }
 
         [Test]
-        public void GivenStateCensusDataRightFilePath_ButWrongHeader_InLoadCensusData_ThrowCustomException()
+        public void GivenWrongHeader_ReturnCustomException()
         {
             int Records = 29;
             string Expected = "wrong file header";
